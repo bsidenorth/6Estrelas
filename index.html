@@ -83,8 +83,15 @@
       </span>
       <span class="font-black uppercase text-[11px] tracking-widest text-zinc-300 group-hover:text-yellow-500 transition-colors">Música</span>
     </button>
-    <div class="font-black uppercase text-[11px] tracking-widest text-zinc-500">
-      NO AR: <span id="stationName" class="text-yellow-500 blink">FLASH FM</span>
+    <div class="flex items-center gap-2">
+      <span class="relative flex h-2 w-2 shrink-0">
+        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-600 opacity-75"></span>
+        <span class="relative inline-flex rounded-full h-2 w-2 bg-red-600"></span>
+      </span>
+      <div class="flex flex-col items-end leading-none gap-0.5">
+        <span class="font-black uppercase text-[9px] tracking-widest text-zinc-500">NO AR</span>
+        <img src="https://i.ibb.co/Rpyff8c7/1000095057-removebg-preview.png" alt="Flash FM" class="h-6 w-auto object-contain">
+      </div>
     </div>
   </div>
 </div>
@@ -445,7 +452,7 @@
     {category:'roupas', subcategory:'camisetas', title:'Camiseta Streetwear Rockstar', price:'R$ 49,90', installment:'ou 4x de R$ 12,47', link:'https://s.shopee.com.br/3LP3uPRRK0', img:'https://i.ibb.co/nMz2CVS0/Screenshot-20260707-153115-Shopee.jpg'},
     {category:'roupas', subcategory:'camisetas', title:'Camiseta Streetwear GTA PS2 Nostalgia', price:'R$ 49,90', installment:'ou 4x de R$ 14,98', link:'#', img:'https://i.ibb.co/R4PM819m/br-11134207-7r98o-mc4lw02in2dh85.avif'},
     // ROUPAS - MOLETOM
-    {category:'roupas', subcategory:'moletom', title:'Moletom GTA 6', price:'R$ 69,90', installment:'ou 4x de R$ 17,47', link:'#', img:'https://i.ibb.co/bMZHM3p5/sg-11134201-7ratg-mb5whpz4a8i899.avif'},
+    {category:'roupas', subcategory:'moletom', title:'Moletom Masculino Original GTA 6 Branco', price:'R$ 69,90', installment:'ou 4x de R$ 17,47', link:'#', img:'https://i.ibb.co/bMZHM3p5/sg-11134201-7ratg-mb5whpz4a8i899.avif'},
     // ROUPAS - CHINELOS
     {category:'roupas', subcategory:'chinelos', title:'Chinelo Slider GTA VI', price:'R$ 51,94', installment:'ou 10x de R$ 5,96', link:'https://s.shopee.com.br/5LA8IjOZAu', img:'https://i.ibb.co/RTz6ZpqD/br-11134207-7r98o-lsitnxdr2o8re7.avif'},
     // ROUPAS - REGATAS
@@ -469,13 +476,23 @@
     // ACESSÓRIOS (SEM SUBCATEGORIA)
     // ACESSÓRIOS - SETUP
     {category:'acessorios', subcategory:'setup', title:'Suporte de Mesa Para Controle GTA', price:'R$ 24,90', installment:'ou 4x de R$ 6,22', link:'#', img:'https://i.ibb.co/JwssDrQG/br-11134207-7r98o-m99bgdbqksua35.avif'},
+    // ACESSÓRIOS - SETUP (poltronas gamer)
+    {category:'acessorios', subcategory:'setup', title:'Poltrona Gamer Sparta Reclinável Preto/Verde com USB', price:'R$ 1.354,91', installment:'Parcele em até 12x', link:'#', img:'#'},
+    {category:'acessorios', subcategory:'setup', title:'Poltrona Gamer Sparta Reclinável Preta com USB e Rodinhas', price:'R$ 1.712,65', installment:'Parcele em até 12x', link:'#', img:'#'},
+    {category:'acessorios', subcategory:'setup', title:'Poltrona Gamer Sparta Reclinável Preto/Azul com Carregador USB', price:'R$ 1.528,66', installment:'Parcele em até 12x', link:'#', img:'#'},
     // ACESSÓRIOS - CANECAS (copo térmico unificado aqui)
     {category:'acessorios', subcategory:'canecas', title:'Copo Térmico GTA VI Personalizado (473ml)', price:'R$ 49,90', installment:'ou 4x de R$ 12,47', link:'#', img:'https://i.ibb.co/7xZs1Nb3/br-11134207-81z1k-mgjmzztgvimc29.avif'},
     // ACESSÓRIOS - LUMINÁRIAS (novas, unificadas com a subcategoria já existente)
     {category:'acessorios', subcategory:'luminarias', title:'Luminária Pendente Playstation Branca', price:'R$ 98,01', installment:'ou 4x de R$ 24,50', link:'https://s.shopee.com.br/1Le0ea5i0z', img:'https://i.ibb.co/k6mR2Vgm/be6a43abeeaa16ede51b6a185c08c979.avif'},
     {category:'acessorios', subcategory:'luminarias', title:'Luminária GTA 6 Impressão 3D LED', price:'R$ 129,90', installment:'ou 4x de R$ 32,47', link:'#', img:'https://i.ibb.co/NnfTZYkZ/br-11134207-820lw-mlwopw7mg2rqeb.avif'},
+    {category:'acessorios', subcategory:'luminarias', title:'Luminária Gamer LED Playstation/Xbox/Nintendo', price:'R$ 56,00', installment:'Frete grátis com cupom', link:'#', img:'#'},
     // ACESSÓRIOS - TAPETES
     {category:'acessorios', subcategory:'tapetes', title:'Tapete Capacho GTA 6 Vice City (60x40)', price:'R$ 89,00', installment:'ou 4x de R$ 22,25', link:'https://s.shopee.com.br/4AyC1chZOT', img:'https://i.ibb.co/Lh6jPjvG/Screenshot-20260708-082714-Shopee.jpg'},
+    // ACESSÓRIOS - MOUSEPADS
+    {category:'acessorios', subcategory:'mousepads', title:'Mouse Pad Gamer Dinheiro Verde (Vários Tamanhos)', price:'R$ 24,95 - 55,45', installment:'Em até 4x de R$ 6,87', link:'#', img:'#'},
+    {category:'acessorios', subcategory:'mousepads', title:'Mouse Pad Gamer Premium Black Dollar 70x35cm', price:'R$ 26,99', installment:'ou 5x de R$ 5,99', link:'#', img:'#'},
+    {category:'acessorios', subcategory:'mousepads', title:'Mousepad GTA VI Logo Neon', price:'R$ 18,00 - 22,00', installment:'Valor à vista', link:'#', img:'#'},
+    {category:'acessorios', subcategory:'mousepads', title:'Mousepad GTA VI Vice City', price:'R$ 18,00 - 22,00', installment:'Valor à vista', link:'#', img:'#'},
     // ACESSÓRIOS - PLACAS (placas 3D e letreiros unificados aqui)
     {category:'acessorios', subcategory:'placas-decorativas', title:'Placa Decorativa 3D Grand Theft Auto (18cm)', price:'R$ 24,90', installment:'ou 4x de R$ 6,22', link:'#', img:'https://i.ibb.co/q60Kngv/br-11134207-81z1k-mfwqwybg5b7rc1.avif'},
     {category:'acessorios', subcategory:'placas-decorativas', title:'Placa Decorativa Rockstar Games (10x10)', price:'R$ 26,90', installment:'ou 4x de R$ 6,72', link:'#', img:'https://i.ibb.co/gLqSxPvZ/br-11134207-81z1k-mf1qlubo82rod8.jpg'},
@@ -491,6 +508,8 @@
     {category:'eletronicos', title:'Controle Sem Fio DualSense Chroma PS5', price:'R$ 499,90', installment:'ou 4x de R$ 124,97', link:'https://s.shopee.com.br/3ViU85IwAZ', img:'https://i.ibb.co/tMPCWX9t/sg-11134201-821en-mgke5ekea70oed.avif'},
     // ELETRÔNICOS - CONSOLES
     {category:'eletronicos', subcategory:'consoles', title:'Console Playstation 5 Edição Slim Digital', price:'R$ 4.299,00', installment:'ou 10x de R$ 429,90', link:'https://s.shopee.com.br/6pyxCHLoEl', img:'https://i.ibb.co/9HxfzSPY/Screenshot-20260708-082404-Shopee.jpg'},
+    {category:'eletronicos', subcategory:'consoles', title:'Console Xbox Series S 512GB (Sem Controle)', price:'R$ 2.274,08', installment:'Frete grátis com cupom', link:'#', img:'#'},
+    {category:'eletronicos', subcategory:'consoles', title:'Console Xbox Series S 512GB Original Seminovo (Garantia 90 dias)', price:'R$ 2.412,08', installment:'Parcele em até 12x', link:'#', img:'#'},
 
     // POSTERS (6 no total: 1 real + 5 novos)
     {category:'posters', title:'Poster GTA VI', price:'R$ 12,90', installment:'ou 4x de R$ 0,00', link:'https://s.shopee.com.br/7AblSL0rcH', img:'https://i.ibb.co/P0xj97s/no-mark-React-Native-snapshot-image-7.png'},

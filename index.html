@@ -24,6 +24,43 @@
   .subfiltro-btn.active:hover {
     color:#000 !important;
   }
+
+  /* Padronização visual das fotos de produto - corrige fotos com "sobra" de fundo branco
+     aplicando um leve zoom uniforme, deixando todas as imagens com o mesmo enquadramento */
+  .produto-img {
+    transform: scale(1.14);
+    transition: transform .35s ease;
+  }
+  .produto-card:hover .produto-img {
+    transform: scale(1.22);
+  }
+
+  /* Efeito sutil no botão "Ver Detalhes" - um brilho que atravessa o botão periodicamente,
+     discreto o bastante pra não quebrar a estética, mas que chama a atenção no canto do olho */
+  .btn-detalhes {
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-detalhes::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -60%;
+    width: 40%;
+    height: 100%;
+    background: linear-gradient(115deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.55) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-20deg);
+    animation: sheen 3.2s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+  @keyframes sheen {
+    0%   { left: -60%; }
+    18%  { left: 130%; }
+    100% { left: 130%; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .btn-detalhes::after { animation: none; }
+  }
 </style>
 </head>
 <body class="bg-black text-white">
@@ -68,6 +105,27 @@
       <div class="min-w-full h-full">
         <img src="https://i.ibb.co/SDc9ZQ6n/1000094785-1.jpg" class="w-full h-full object-cover object-center" alt="banner">
       </div>
+      <div class="min-w-full h-full">
+        <img src="https://www.rockstargames.com/VI/_next/static/media/Jason_Duval_05.0kxp6enhvzqka.jpg" class="w-full h-full object-cover object-center" alt="banner">
+      </div>
+      <div class="min-w-full h-full">
+        <img src="https://www.rockstargames.com/VI/_next/static/media/Jason_Duval_06.086o72llg6~1p.jpg" class="w-full h-full object-cover object-center" alt="banner">
+      </div>
+      <div class="min-w-full h-full">
+        <img src="https://www.rockstargames.com/VI/_next/static/media/Lucia_Caminos_01.0a7yqvewctkfp.jpg" class="w-full h-full object-cover object-center" alt="banner">
+      </div>
+      <div class="min-w-full h-full">
+        <img src="https://www.rockstargames.com/VI/_next/static/media/Lucia_Caminos_03.14xgd2y_ymmeg.jpg" class="w-full h-full object-cover object-center" alt="banner">
+      </div>
+      <div class="min-w-full h-full">
+        <img src="https://www.rockstargames.com/VI/_next/static/media/Lucia_Caminos_04.04kb_~4ubn3wn.jpg" class="w-full h-full object-cover object-center" alt="banner">
+      </div>
+      <div class="min-w-full h-full">
+        <img src="https://www.rockstargames.com/VI/_next/static/media/Cal_Hampton_01.0xlil231_osh4.jpg" class="w-full h-full object-cover object-center" alt="banner">
+      </div>
+      <div class="min-w-full h-full">
+        <img src="https://www.rockstargames.com/VI/_next/static/media/Cal_Hampton_02.05r2t_mck65fe.jpg" class="w-full h-full object-cover object-center" alt="banner">
+      </div>
     </div>
     <button id="prevSlide" class="absolute left-0 top-0 h-full px-3 bg-black/40 text-yellow-500 font-black text-xl hover:bg-black/70 transition-colors">‹</button>
     <button id="nextSlide" class="absolute right-0 top-0 h-full px-3 bg-black/40 text-yellow-500 font-black text-xl hover:bg-black/70 transition-colors">›</button>
@@ -108,9 +166,8 @@
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="mousepads">Mousepads</button>
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="chaveiros">Chaveiros</button>
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="adesivos">Adesivos</button>
-        <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="placas-decorativas">Placas Decorativas</button>
+        <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="placas-decorativas">Placas</button>
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="tapetes">Tapetes</button>
-        <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="letreiros">Letreiros</button>
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="colecionaveis">Colecionáveis</button>
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="setup">Setup</button>
       </div>
@@ -141,16 +198,16 @@
     <a href="https://s.shopee.com.br/6pyuWDHcTe" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="roupas" data-subcategory="bucket">
-      <div class="aspect-square bg-[#121212] relative">
+      <div class="aspect-square bg-[#121212] relative overflow-hidden">
         <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
-        <img src="https://i.ibb.co/fd3F6w1z/no-mark-React-Native-snapshot-image.png" class="w-full h-full object-cover" alt="Bucket GTA VI">
+        <img src="https://i.ibb.co/fd3F6w1z/no-mark-React-Native-snapshot-image.png" class="w-full h-full object-cover produto-img" alt="Bucket GTA VI">
       </div>
       <div class="p-3 flex flex-col flex-1">
         <h3 class="font-black uppercase text-xs leading-tight text-zinc-200 line-clamp-2 min-h-[2.2rem]">Bucket GTA VI</h3>
         <div class="mt-auto pt-2">
           <p class="text-yellow-500 font-black text-base">R$ 21,63</p>
           <p class="text-zinc-500 text-[11px] font-medium mt-0.5">ou 4x de R$ 5,96</p>
-          <div class="mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
+          <div class="btn-detalhes mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
             Ver Detalhes ➔
           </div>
         </div>
@@ -161,16 +218,16 @@
     <a href="https://s.shopee.com.br/gOHBgUrok" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="canecas">
-      <div class="aspect-square bg-[#121212] relative">
+      <div class="aspect-square bg-[#121212] relative overflow-hidden">
         <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
-        <img src="https://i.ibb.co/TM6Gq6y3/no-mark-React-Native-snapshot-image-0.png" class="w-full h-full object-cover" alt="Caneca GTA VI Neon Style">
+        <img src="https://i.ibb.co/TM6Gq6y3/no-mark-React-Native-snapshot-image-0.png" class="w-full h-full object-cover produto-img" alt="Caneca GTA VI Neon Style">
       </div>
       <div class="p-3 flex flex-col flex-1">
         <h3 class="font-black uppercase text-xs leading-tight text-zinc-200 line-clamp-2 min-h-[2.2rem]">Caneca GTA VI Neon Style</h3>
         <div class="mt-auto pt-2">
           <p class="text-yellow-500 font-black text-base">R$ 39,90</p>
           <p class="text-zinc-500 text-[11px] font-medium mt-0.5">ou 4x de R$ 10,98</p>
-          <div class="mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
+          <div class="btn-detalhes mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
             Ver Detalhes ➔
           </div>
         </div>
@@ -181,16 +238,16 @@
     <a href="https://s.shopee.com.br/70IKm0A1kl" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="placas-decorativas">
-      <div class="aspect-square bg-[#121212] relative">
+      <div class="aspect-square bg-[#121212] relative overflow-hidden">
         <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
-        <img src="https://i.ibb.co/NPF4Dgf/no-mark-React-Native-snapshot-image-2.png" class="w-full h-full object-cover" alt="Placa Decorativa Wasted">
+        <img src="https://i.ibb.co/NPF4Dgf/no-mark-React-Native-snapshot-image-2.png" class="w-full h-full object-cover produto-img" alt="Placa Decorativa Wasted">
       </div>
       <div class="p-3 flex flex-col flex-1">
         <h3 class="font-black uppercase text-xs leading-tight text-zinc-200 line-clamp-2 min-h-[2.2rem]">Placa Decorativa Wasted</h3>
         <div class="mt-auto pt-2">
           <p class="text-yellow-500 font-black text-base">R$ 19,90</p>
           <p class="text-zinc-500 text-[11px] font-medium mt-0.5">Parcelamento indisponível</p>
-          <div class="mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
+          <div class="btn-detalhes mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
             Ver Detalhes ➔
           </div>
         </div>
@@ -201,16 +258,16 @@
     <a href="https://s.shopee.com.br/2LWVPWjsGS" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="setup">
-      <div class="aspect-square bg-[#121212] relative">
+      <div class="aspect-square bg-[#121212] relative overflow-hidden">
         <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
-        <img src="https://i.ibb.co/Rk627PKY/no-mark-React-Native-snapshot-image-3.png" class="w-full h-full object-cover" alt="Suporte de Controle GTA VI PS5/Xbox Series S">
+        <img src="https://i.ibb.co/Rk627PKY/no-mark-React-Native-snapshot-image-3.png" class="w-full h-full object-cover produto-img" alt="Suporte de Controle GTA VI PS5/Xbox Series S">
       </div>
       <div class="p-3 flex flex-col flex-1">
         <h3 class="font-black uppercase text-xs leading-tight text-zinc-200 line-clamp-2 min-h-[2.2rem]">Suporte de Controle GTA VI PS5/Xbox Series S</h3>
         <div class="mt-auto pt-2">
           <p class="text-yellow-500 font-black text-base">R$ 34,90</p>
           <p class="text-zinc-500 text-[11px] font-medium mt-0.5">ou 6x de R$ 6,51</p>
-          <div class="mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
+          <div class="btn-detalhes mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
             Ver Detalhes ➔
           </div>
         </div>
@@ -221,16 +278,16 @@
     <a href="https://s.shopee.com.br/3g1smCO1xY" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="chaveiros">
-      <div class="aspect-square bg-[#121212] relative">
+      <div class="aspect-square bg-[#121212] relative overflow-hidden">
         <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
-        <img src="https://i.ibb.co/kg7jBcCR/no-mark-React-Native-snapshot-image-1.png" class="w-full h-full object-cover" alt="Chaveiro Mini Capa PS5 GTA VI">
+        <img src="https://i.ibb.co/kg7jBcCR/no-mark-React-Native-snapshot-image-1.png" class="w-full h-full object-cover produto-img" alt="Chaveiro Mini Capa PS5 GTA VI">
       </div>
       <div class="p-3 flex flex-col flex-1">
         <h3 class="font-black uppercase text-xs leading-tight text-zinc-200 line-clamp-2 min-h-[2.2rem]">Chaveiro Mini Capa PS5 GTA VI</h3>
         <div class="mt-auto pt-2">
           <p class="text-yellow-500 font-black text-base">R$ 12,90</p>
           <p class="text-zinc-500 text-[11px] font-medium mt-0.5">ou 4x de R$ 5,20</p>
-          <div class="mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
+          <div class="btn-detalhes mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
             Ver Detalhes ➔
           </div>
         </div>
@@ -388,7 +445,7 @@
     {category:'roupas', subcategory:'camisetas', title:'Camiseta Streetwear Rockstar', price:'R$ 49,90', installment:'ou 4x de R$ 12,47', link:'https://s.shopee.com.br/3LP3uPRRK0', img:'https://i.ibb.co/nMz2CVS0/Screenshot-20260707-153115-Shopee.jpg'},
     {category:'roupas', subcategory:'camisetas', title:'Camiseta Streetwear GTA PS2 Nostalgia', price:'R$ 49,90', installment:'ou 4x de R$ 14,98', link:'#', img:'https://i.ibb.co/R4PM819m/br-11134207-7r98o-mc4lw02in2dh85.avif'},
     // ROUPAS - MOLETOM
-    {category:'roupas', subcategory:'moletom', title:'Moletom Masculino Original GTA 6 Branco', price:'R$ 69,90', installment:'ou 4x de R$ 17,47', link:'#', img:'https://i.ibb.co/bMZHM3p5/sg-11134201-7ratg-mb5whpz4a8i899.avif'},
+    {category:'roupas', subcategory:'moletom', title:'Moletom GTA 6', price:'R$ 69,90', installment:'ou 4x de R$ 17,47', link:'#', img:'https://i.ibb.co/bMZHM3p5/sg-11134201-7ratg-mb5whpz4a8i899.avif'},
     // ROUPAS - CHINELOS
     {category:'roupas', subcategory:'chinelos', title:'Chinelo Slider GTA VI', price:'R$ 51,94', installment:'ou 10x de R$ 5,96', link:'https://s.shopee.com.br/5LA8IjOZAu', img:'https://i.ibb.co/RTz6ZpqD/br-11134207-7r98o-lsitnxdr2o8re7.avif'},
     // ROUPAS - REGATAS
@@ -419,11 +476,11 @@
     {category:'acessorios', subcategory:'luminarias', title:'Luminária GTA 6 Impressão 3D LED', price:'R$ 129,90', installment:'ou 4x de R$ 32,47', link:'#', img:'https://i.ibb.co/NnfTZYkZ/br-11134207-820lw-mlwopw7mg2rqeb.avif'},
     // ACESSÓRIOS - TAPETES
     {category:'acessorios', subcategory:'tapetes', title:'Tapete Capacho GTA 6 Vice City (60x40)', price:'R$ 89,00', installment:'ou 4x de R$ 22,25', link:'https://s.shopee.com.br/4AyC1chZOT', img:'https://i.ibb.co/Lh6jPjvG/Screenshot-20260708-082714-Shopee.jpg'},
-    // ACESSÓRIOS - LETREIROS (placas 3D e letreiros unificados aqui)
-    {category:'acessorios', subcategory:'letreiros', title:'Placa Decorativa 3D Grand Theft Auto (18cm)', price:'R$ 24,90', installment:'ou 4x de R$ 6,22', link:'#', img:'https://i.ibb.co/q60Kngv/br-11134207-81z1k-mfwqwybg5b7rc1.avif'},
-    {category:'acessorios', subcategory:'letreiros', title:'Placa Decorativa Rockstar Games (10x10)', price:'R$ 26,90', installment:'ou 4x de R$ 6,72', link:'#', img:'https://i.ibb.co/gLqSxPvZ/br-11134207-81z1k-mf1qlubo82rod8.jpg'},
-    {category:'acessorios', subcategory:'letreiros', title:'Letreiro Gamer Xbox Decorativo Verde', price:'R$ 20,99', installment:'Valor à vista', link:'#', img:'https://i.ibb.co/5ggvYTCb/br-11134207-820lq-mm8a02mlj37k1e.avif'},
-    {category:'acessorios', subcategory:'letreiros', title:'Letreiro GTA VI Grand Theft Auto 3D', price:'R$ 18,99', installment:'Valor à vista', link:'#', img:'https://i.ibb.co/p6PMQwHQ/br-11134207-81z1k-mf1c7wk37thg1d.avif'},
+    // ACESSÓRIOS - PLACAS (placas 3D e letreiros unificados aqui)
+    {category:'acessorios', subcategory:'placas-decorativas', title:'Placa Decorativa 3D Grand Theft Auto (18cm)', price:'R$ 24,90', installment:'ou 4x de R$ 6,22', link:'#', img:'https://i.ibb.co/q60Kngv/br-11134207-81z1k-mfwqwybg5b7rc1.avif'},
+    {category:'acessorios', subcategory:'placas-decorativas', title:'Placa Decorativa Rockstar Games (10x10)', price:'R$ 26,90', installment:'ou 4x de R$ 6,72', link:'#', img:'https://i.ibb.co/gLqSxPvZ/br-11134207-81z1k-mf1qlubo82rod8.jpg'},
+    {category:'acessorios', subcategory:'placas-decorativas', title:'Letreiro Gamer Xbox Decorativo Verde', price:'R$ 20,99', installment:'Valor à vista', link:'#', img:'https://i.ibb.co/5ggvYTCb/br-11134207-820lq-mm8a02mlj37k1e.avif'},
+    {category:'acessorios', subcategory:'placas-decorativas', title:'Letreiro GTA VI Grand Theft Auto 3D', price:'R$ 18,99', installment:'Valor à vista', link:'#', img:'https://i.ibb.co/p6PMQwHQ/br-11134207-81z1k-mf1c7wk37thg1d.avif'},
     // ACESSÓRIOS - COLECIONÁVEIS (dioramas e action figures unificados)
     {category:'acessorios', subcategory:'colecionaveis', title:'Diorama GTA 6 Colecionável Premium', price:'R$ 280,00', installment:'ou 4x de R$ 70,00', link:'#', img:'https://i.ibb.co/S76gcLY3/br-11134207-820m5-moq04n2fxipy56.jpg'},
     {category:'acessorios', subcategory:'colecionaveis', title:'Action Figure GTA San Andreas CJ (1/6)', price:'R$ 390,00', installment:'ou 10x de R$ 39,00', link:'#', img:'https://i.ibb.co/Y7vc7VsJ/br-11134207-820lq-mnx0zptbqz9g2d.jpg'},
@@ -461,16 +518,16 @@
       <a href="${p.link}" target="_blank" rel="noopener noreferrer"
          class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
          data-category="${p.category}"${subAttr}>
-        <div class="aspect-square bg-[#121212] relative">
+        <div class="aspect-square bg-[#121212] relative overflow-hidden">
           ${tagHTML}
-          <img src="${p.img}" class="w-full h-full object-cover" alt="${p.title}">
+          <img src="${p.img}" class="w-full h-full object-cover produto-img" alt="${p.title}">
         </div>
         <div class="p-3 flex flex-col flex-1">
           <h3 class="font-black uppercase text-xs leading-tight text-zinc-200 line-clamp-2 min-h-[2.2rem]">${p.title}</h3>
           <div class="mt-auto pt-2">
             <p class="text-yellow-500 font-black text-base">${p.price}</p>
             <p class="text-zinc-500 text-[11px] font-medium mt-0.5">${p.installment}</p>
-            <div class="mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
+            <div class="btn-detalhes mt-3 bg-[#FBC02D] text-black font-black uppercase text-xs py-2.5 w-full tracking-wider text-center hover:bg-yellow-400 transition-colors">
               Ver Detalhes ➔
             </div>
           </div>

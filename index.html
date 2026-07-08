@@ -3,7 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>⭐️⭐️⭐️⭐️⭐️⭐️</title>
+<meta name="description" content="6 Estrelas — produtos temáticos GTA VI e Rockstar Games: roupas, acessórios, canecas, posters, eletrônicos e itens colecionáveis. Loja de fãs, não afiliada oficialmente à Rockstar Games ou Take-Two.">
+<title>6 Estrelas — Loja Temática GTA VI</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <style>
   body { font-family: Arial, Helvetica, sans-serif; background:#000; }
@@ -39,9 +40,12 @@
 <!-- RADIO PLAYER (FLASH FM) -->
 <div class="bg-black border-b-[1px] border-zinc-800">
   <div class="max-w-6xl mx-auto flex items-center justify-between px-4 py-2">
-    <div class="flex items-center gap-2">
-      <button id="playPause" class="text-white hover:text-yellow-500 font-black text-xs px-2 transition-colors">▶</button>
-    </div>
+    <button id="playPause" class="flex items-center gap-2 group" aria-pressed="false">
+      <span id="toggleTrack" class="relative inline-flex h-5 w-9 items-center bg-zinc-700 transition-colors duration-200 rounded-full shrink-0">
+        <span id="toggleKnob" class="inline-block h-4 w-4 transform translate-x-0.5 bg-black transition-transform duration-200 rounded-full"></span>
+      </span>
+      <span class="font-black uppercase text-[11px] tracking-widest text-zinc-300 group-hover:text-yellow-500 transition-colors">Música</span>
+    </button>
     <div class="font-black uppercase text-[11px] tracking-widest text-zinc-500">
       NO AR: <span id="stationName" class="text-yellow-500 blink">FLASH FM</span>
     </div>
@@ -89,8 +93,6 @@
 
       <div id="sub-roupas" class="hidden gap-2 flex-nowrap">
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="bucket">Bucket</button>
-        <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="meias">Meias</button>
-        <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="cuecas">Cuecas</button>
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="camisetas">Camisetas</button>
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="moletom">Moletom</button>
         <button class="subfiltro-btn shrink-0 bg-black text-zinc-400 border-[1px] border-zinc-800 font-black uppercase text-[11px] px-3 py-1.5 tracking-wider hover:border-yellow-500 hover:text-yellow-500 transition-colors" data-subcategory="chinelos">Chinelos</button>
@@ -135,7 +137,8 @@
     <a href="https://s.shopee.com.br/6pyuWDHcTe" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="roupas" data-subcategory="bucket">
-      <div class="aspect-square bg-[#121212]">
+      <div class="aspect-square bg-[#121212] relative">
+        <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/fd3F6w1z/no-mark-React-Native-snapshot-image.png" class="w-full h-full object-cover" alt="Bucket GTA VI">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -154,7 +157,8 @@
     <a href="https://s.shopee.com.br/gOHBgUrok" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="canecas">
-      <div class="aspect-square bg-[#121212]">
+      <div class="aspect-square bg-[#121212] relative">
+        <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/TM6Gq6y3/no-mark-React-Native-snapshot-image-0.png" class="w-full h-full object-cover" alt="Caneca GTA VI Neon Style">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -173,7 +177,8 @@
     <a href="https://s.shopee.com.br/70IKm0A1kl" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="placas-decorativas">
-      <div class="aspect-square bg-[#121212]">
+      <div class="aspect-square bg-[#121212] relative">
+        <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/NPF4Dgf/no-mark-React-Native-snapshot-image-2.png" class="w-full h-full object-cover" alt="Placa Decorativa Wasted">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -192,7 +197,8 @@
     <a href="https://s.shopee.com.br/2LWVPWjsGS" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="placas-decorativas">
-      <div class="aspect-square bg-[#121212]">
+      <div class="aspect-square bg-[#121212] relative">
+        <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/8nsDJZN1/no-mark-React-Native-snapshot-image-3.png" class="w-full h-full object-cover" alt="Suporte de Controle GTA VI PS5/Xbox Series S">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -211,7 +217,8 @@
     <a href="https://s.shopee.com.br/3g1smCO1xY" target="_blank" rel="noopener noreferrer"
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="chaveiros">
-      <div class="aspect-square bg-[#121212]">
+      <div class="aspect-square bg-[#121212] relative">
+        <span class="absolute top-1.5 left-1.5 bg-[#EE4D2D] text-white text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/kg7jBcCR/no-mark-React-Native-snapshot-image-1.png" class="w-full h-full object-cover" alt="Chaveiro Mini Capa PS5 GTA VI">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -232,9 +239,41 @@
 </section>
 
 <!-- FOOTER -->
-<footer id="contato" class="border-t-[1px] border-zinc-800 py-6 text-center font-black uppercase text-[11px] tracking-widest text-zinc-600">
-  6 Estrelas © 2026 — Todos os direitos reservados
+<footer id="contato" class="border-t-[1px] border-zinc-800 py-6 px-4 text-center">
+  <p class="font-black uppercase text-[11px] tracking-widest text-zinc-600">6 Estrelas © 2026 — Todos os direitos reservados</p>
+  <button id="openPolicies" type="button" class="mt-3 font-black uppercase text-[10px] tracking-widest text-zinc-500 hover:text-yellow-500 underline underline-offset-2 decoration-zinc-700 hover:decoration-yellow-500 transition-colors">
+    Políticas &amp; Informações
+  </button>
 </footer>
+
+<!-- MODAL DE POLÍTICAS -->
+<div id="policiesModal" class="hidden fixed inset-0 z-[60] items-center justify-center px-4">
+  <div id="policiesBackdrop" class="absolute inset-0 bg-black/80"></div>
+  <div class="relative bg-black border-[1px] border-zinc-800 max-w-md w-full max-h-[80vh] overflow-y-auto p-5">
+    <div class="flex items-center justify-between mb-4 gap-4">
+      <h2 class="font-black uppercase text-sm tracking-widest text-yellow-500">Políticas &amp; Informações</h2>
+      <button id="closePolicies" type="button" aria-label="Fechar" class="text-zinc-400 hover:text-yellow-500 text-xl leading-none shrink-0">✕</button>
+    </div>
+    <div class="space-y-4 text-left">
+      <div>
+        <p class="font-black uppercase text-[11px] tracking-widest text-zinc-300 mb-1">🔒 Compra 100% Segura</p>
+        <p class="text-[11px] text-zinc-500 normal-case leading-relaxed">Todas as compras são processadas diretamente pelas plataformas parceiras, com pagamento e dados protegidos por elas.</p>
+      </div>
+      <div>
+        <p class="font-black uppercase text-[11px] tracking-widest text-zinc-300 mb-1">📦 Via Shopee &amp; Amazon</p>
+        <p class="text-[11px] text-zinc-500 normal-case leading-relaxed">Nenhum produto é vendido diretamente por nós. Ao clicar em "Ver Detalhes", você é redirecionado para a Shopee ou Amazon para concluir a compra com segurança.</p>
+      </div>
+      <div>
+        <p class="font-black uppercase text-[11px] tracking-widest text-zinc-300 mb-1">↩️ Troca Garantida Pela Plataforma</p>
+        <p class="text-[11px] text-zinc-500 normal-case leading-relaxed">Trocas, devoluções e reembolsos seguem as políticas da Shopee ou Amazon, conforme a loja de origem do produto.</p>
+      </div>
+      <div>
+        <p class="font-black uppercase text-[11px] tracking-widest text-zinc-300 mb-1">Sobre a 6 Estrelas</p>
+        <p class="text-[11px] text-zinc-500 normal-case leading-relaxed">Loja de fãs com produtos inspirados em GTA VI e no universo Rockstar Games. Não somos afiliados, patrocinados ou endossados pela Rockstar Games, Take-Two Interactive ou qualquer detentor oficial das marcas.</p>
+      </div>
+    </div>
+  </div>
+</div>
 
 <!-- YOUTUBE IFRAME API -->
 <script src="https://www.youtube.com/iframe_api"></script>
@@ -245,6 +284,23 @@
   let playing = false;
   let userInteracted = false;
   const playPauseBtn = document.getElementById('playPause');
+  const toggleTrack = document.getElementById('toggleTrack');
+  const toggleKnob = document.getElementById('toggleKnob');
+
+  function updateToggleUI(isOn){
+    playPauseBtn.setAttribute('aria-pressed', isOn ? 'true' : 'false');
+    if(isOn){
+      toggleTrack.classList.remove('bg-zinc-700');
+      toggleTrack.classList.add('bg-yellow-500');
+      toggleKnob.classList.remove('translate-x-0.5');
+      toggleKnob.classList.add('translate-x-4');
+    } else {
+      toggleTrack.classList.remove('bg-yellow-500');
+      toggleTrack.classList.add('bg-zinc-700');
+      toggleKnob.classList.remove('translate-x-4');
+      toggleKnob.classList.add('translate-x-0.5');
+    }
+  }
 
   function onYouTubeIframeAPIReady(){
     ytPlayer = new YT.Player('ytplayer', {
@@ -252,32 +308,20 @@
       width: '0',
       videoId: 'vqBbPH0aVXY',
       playerVars: {
-        autoplay: 1,
+        autoplay: 0,
         controls: 0,
         loop: 1,
-        playlist: 'vqBbPH0aVXY',
-        mute: 1
+        playlist: 'vqBbPH0aVXY'
       },
       events: {
-        onReady: (e) => {
-          e.target.playVideo();
-          playing = true;
-          playPauseBtn.textContent = "❚❚";
+        onReady: () => {
+          // Música começa desativada — só toca quando o usuário liga no toggle
+          playing = false;
+          updateToggleUI(false);
         }
       }
     });
   }
-
-  // Navegadores bloqueiam autoplay com som; na primeira interação do usuário, tenta tirar o mudo
-  function unlockAudio(){
-    if(userInteracted || !ytPlayer || typeof ytPlayer.unMute !== 'function') return;
-    userInteracted = true;
-    ytPlayer.unMute();
-    ytPlayer.playVideo();
-    playing = true;
-    playPauseBtn.textContent = "❚❚";
-  }
-  document.addEventListener('click', unlockAudio, { once: true });
 
   playPauseBtn.addEventListener('click', (e) => {
     e.stopPropagation();
@@ -291,7 +335,30 @@
       ytPlayer.playVideo();
       playing = true;
     }
-    playPauseBtn.textContent = playing ? "❚❚" : "▶";
+    updateToggleUI(playing);
+  });
+
+  // ================== MODAL DE POLÍTICAS ==================
+  const policiesModal = document.getElementById('policiesModal');
+  const openPoliciesBtn = document.getElementById('openPolicies');
+  const closePoliciesBtn = document.getElementById('closePolicies');
+  const policiesBackdrop = document.getElementById('policiesBackdrop');
+
+  function openPolicies(){
+    policiesModal.classList.remove('hidden');
+    policiesModal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+  function closePolicies(){
+    policiesModal.classList.add('hidden');
+    policiesModal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+  openPoliciesBtn.addEventListener('click', openPolicies);
+  closePoliciesBtn.addEventListener('click', closePolicies);
+  policiesBackdrop.addEventListener('click', closePolicies);
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') closePolicies();
   });
 
   // ================== SLIDER ==================
@@ -309,14 +376,6 @@
   // ================== PRODUTOS TEMPORÁRIOS (fácil de editar) ==================
   // Basta trocar "title", "price", "installment", "link" e "img" de cada item quando tiver o produto real.
   const placeholderProducts = [
-    // ROUPAS - MEIAS
-    {category:'roupas', subcategory:'meias', title:'Produto Temporário — Meias 1', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=MEIAS+1'},
-    {category:'roupas', subcategory:'meias', title:'Produto Temporário — Meias 2', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=MEIAS+2'},
-    {category:'roupas', subcategory:'meias', title:'Produto Temporário — Meias 3', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=MEIAS+3'},
-    // ROUPAS - CUECAS
-    {category:'roupas', subcategory:'cuecas', title:'Produto Temporário — Cuecas 1', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=CUECAS+1'},
-    {category:'roupas', subcategory:'cuecas', title:'Produto Temporário — Cuecas 2', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=CUECAS+2'},
-    {category:'roupas', subcategory:'cuecas', title:'Produto Temporário — Cuecas 3', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=CUECAS+3'},
     // ROUPAS - CAMISETAS
     {category:'roupas', subcategory:'camisetas', title:'Camiseta Simpsons Vice City', price:'R$ 29,45', installment:'ou 4x de R$ 7,36', link:'https://s.shopee.com.br/1BKZKCfPey', img:'https://i.ibb.co/9SHQDL3/Screenshot-20260707-152607-Shopee.jpg'},
     {category:'roupas', subcategory:'camisetas', title:'Camiseta Oversized Off White Breaking Bad GTA', price:'R$ 49,99', installment:'ou 4x de R$ 12,50', link:'https://s.shopee.com.br/80AtTADtQf', img:'https://i.ibb.co/mg9yBws/Screenshot-20260707-153509-Shopee.jpg'},
@@ -324,8 +383,6 @@
     {category:'roupas', subcategory:'camisetas', title:'Camiseta Logo GTA VI', price:'R$ 34,95', installment:'ou 4x de R$ 8,73', link:'https://s.shopee.com.br/6L2fV4I8WY', img:'https://i.ibb.co/23cNDRWx/Screenshot-20260707-154857-Shopee.jpg'},
     {category:'roupas', subcategory:'camisetas', title:'Camiseta Streetwear Rockstar', price:'R$ 49,90', installment:'ou 4x de R$ 12,47', link:'https://s.shopee.com.br/3LP3uPRRK0', img:'https://i.ibb.co/nMz2CVS0/Screenshot-20260707-153115-Shopee.jpg'},
     // ROUPAS - MOLETOM
-    {category:'roupas', subcategory:'moletom', title:'Produto Temporário — Moletom 1', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=MOLETOM+1'},
-    {category:'roupas', subcategory:'moletom', title:'Produto Temporário — Moletom 2', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=MOLETOM+2'},
     {category:'roupas', subcategory:'moletom', title:'Moletom Masculino Original GTA 6 Branco', price:'R$ 69,90', installment:'ou 4x de R$ 17,47', link:'#', img:'#'},
     // ROUPAS - CHINELOS
     {category:'roupas', subcategory:'chinelos', title:'Chinelo Slider GTA VI', price:'R$ 51,94', installment:'ou 10x de R$ 5,96', link:'https://s.shopee.com.br/5LA8IjOZAu', img:'https://i.ibb.co/RTz6ZpqD/br-11134207-7r98o-lsitnxdr2o8re7.avif'},
@@ -333,30 +390,17 @@
     {category:'roupas', subcategory:'regatas', title:'Camiseta Regata Machão Oversized GTA VI', price:'R$ 39,99', installment:'ou 4x de R$ 10,00', link:'#', img:'#'},
 
     // ACESSÓRIOS - CANECAS (2 temporárias, além da real já cadastrada)
-    {category:'acessorios', subcategory:'canecas', title:'Produto Temporário — Caneca 1', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/000000/FBC02D?text=CANECA+1'},
-    {category:'acessorios', subcategory:'canecas', title:'Produto Temporário — Caneca 2', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/000000/FBC02D?text=CANECA+2'},
     {category:'acessorios', subcategory:'canecas', title:'Caneca PlayStation Símbolos Alça Preta', price:'R$ 49,90', installment:'ou 4x de R$ 12,47', link:'#', img:'#'},
     {category:'acessorios', subcategory:'canecas', title:'Caneca Dupla GTA 6 e Rockstar Games', price:'R$ 32,90', installment:'ou 4x de R$ 8,22', link:'#', img:'#'},
     // ACESSÓRIOS - LUMINÁRIAS
     {category:'acessorios', subcategory:'luminarias', title:'Luminária LoW Rider', price:'R$ 79,90', installment:'ou 4x de R$ 0,00', link:'https://s.shopee.com.br/6L2eLzyRcN', img:'https://i.ibb.co/rR1czn9y/no-mark-React-Native-snapshot-image-4.png'},
     {category:'acessorios', subcategory:'luminarias', title:'Luminária Placo de dinheiro flutuante', price:'R$ 309,41', installment:'ou 4x de R$ 0,00', link:'https://s.shopee.com.br/5LA7Atjfaa', img:'https://ae-pic-a1.aliexpress-media.com/kf/Sc63205fcf5e2428ca2814968cfbbb33a4.jpg'},
-    {category:'acessorios', subcategory:'luminarias', title:'Produto Temporário — Luminária 3', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=LUMINARIA+3'},
-    {category:'acessorios', subcategory:'luminarias', title:'Produto Temporário — Luminária 4', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=LUMINARIA+4'},
-    // ACESSÓRIOS - MOUSEPADS
-    {category:'acessorios', subcategory:'mousepads', title:'Produto Temporário — Mousepad 1', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=MOUSEPAD+1'},
-    {category:'acessorios', subcategory:'mousepads', title:'Produto Temporário — Mousepad 2', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=MOUSEPAD+2'},
-    {category:'acessorios', subcategory:'mousepads', title:'Produto Temporário — Mousepad 3', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=MOUSEPAD+3'},
     // ACESSÓRIOS - CHAVEIROS (2 temporários, além do real já cadastrado)
-    {category:'acessorios', subcategory:'chaveiros', title:'Produto Temporário — Chaveiro 1', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=CHAVEIRO+1'},
-    {category:'acessorios', subcategory:'chaveiros', title:'Produto Temporário — Chaveiro 2', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=CHAVEIRO+2'},
     {category:'acessorios', subcategory:'chaveiros', title:'Chaveiro Rockstar Games Emborrachado', price:'R$ 13,90', installment:'Valor à vista', link:'#', img:'#'},
     // ACESSÓRIOS - ADESIVOS
     {category:'acessorios', subcategory:'adesivos', title:'Adesivo Rockstar Laser Prateado', price:'R$ 10,16', installment:'ou 4x de R$ 0,00', link:'https://s.shopee.com.br/4Ay9pzUNOr', img:'https://i.ibb.co/hJ1rnh4V/no-mark-React-Native-snapshot-image-5.png'},
     {category:'acessorios', subcategory:'adesivos', title:'Pacote 50 pcs de adesivos GTA', price:'R$ 11,90', installment:'ou 4x de R$ 0,00', link:'https://s.shopee.com.br/6ffUpTl2T8', img:'https://i.ibb.co/Xr70nk3K/no-mark-React-Native-snapshot-image-6.png'},
     {category:'acessorios', subcategory:'adesivos', title:'Skin Adesivo Completo Para Controle PS5 GTA 6', price:'R$ 29,99', installment:'ou 4x de R$ 7,50', link:'https://s.shopee.com.br/BS2A6nv9F', img:'https://i.ibb.co/C56LG1k1/br-11134201-81z1k-mfy31vuvmmtc21.avif'},
-    // ACESSÓRIOS - PLACAS DECORATIVAS (2 temporários, além dos 2 reais já cadastrados)
-    {category:'acessorios', subcategory:'placas-decorativas', title:'Produto Temporário — Placa 1', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=PLACA+1'},
-    {category:'acessorios', subcategory:'placas-decorativas', title:'Produto Temporário — Placa 2', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=PLACA+2'},
     // ACESSÓRIOS (SEM SUBCATEGORIA)
     {category:'acessorios', title:'Suporte de Mesa Para Controle GTA', price:'R$ 24,90', installment:'ou 4x de R$ 6,22', link:'#', img:'#'},
     // ACESSÓRIOS - CANECAS (copo térmico unificado aqui)
@@ -385,30 +429,31 @@
     // POSTERS (6 no total: 1 real + 5 novos)
     {category:'posters', title:'Poster GTA VI', price:'R$ 12,90', installment:'ou 4x de R$ 0,00', link:'https://s.shopee.com.br/7AblSL0rcH', img:'https://i.ibb.co/P0xj97s/no-mark-React-Native-snapshot-image-7.png'},
     {category:'posters', title:'Poster GTA VI Geek', price:'R$ 11,99', installment:'Valor à vista', link:'https://s.shopee.com.br/18byAErkS', img:'https://i.ibb.co/gM9zsnCd/sg-11134201-824gw-mfosq5mr4dfx90.avif'},
-    {category:'posters', title:'Produto Temporário — Poster 3', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=POSTER+3'},
-    {category:'posters', title:'Produto Temporário — Poster 4', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=POSTER+4'},
-    {category:'posters', title:'Produto Temporário — Poster 5', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/121212/FBC02D?text=POSTER+5'},
 
     // POSTERS/DECORAÇÃO - QUADROS
     {category:'posters', subcategory:'quadros', title:'Quadro Decorativo Tático Gamer (Pistola)', price:'R$ 219,00', installment:'ou 4x de R$ 54,75', link:'https://s.shopee.com.br/9pcYmNM6i0', img:'https://i.ibb.co/Wpkw4s2Z/Screenshot-20260708-083254-Shopee.jpg'},
     {category:'posters', subcategory:'quadros', title:'Quadro Decorativo Dólar Luxo', price:'R$ 179,00', installment:'ou 4x de R$ 44,75', link:'#', img:'#'},
 
 
-    // DIGITAIS - E-BOOKS/GUIAS
-    {category:'digitais', subcategory:'ebooks-guias', title:'Produto Temporário — E-book/Guia 1', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/000000/FBC02D?text=EBOOK+1'},
-    {category:'digitais', subcategory:'ebooks-guias', title:'Produto Temporário — E-book/Guia 2', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/000000/FBC02D?text=EBOOK+2'},
-    // DIGITAIS - PRESETS/MODS
-    {category:'digitais', subcategory:'presets-mods', title:'Produto Temporário — Preset/Mod 1', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/000000/FBC02D?text=MOD+1'},
-    {category:'digitais', subcategory:'presets-mods', title:'Produto Temporário — Preset/Mod 2', price:'R$ 0,00', installment:'ou 4x de R$ 0,00', link:'#', img:'https://placehold.co/600x600/000000/FBC02D?text=MOD+2'}
   ];
+
+  function getPlatformTag(link){
+    if(!link || link === '#') return null;
+    if(link.includes('shopee')) return { label: 'Shopee', cls: 'bg-[#EE4D2D] text-white' };
+    if(link.includes('amazon')) return { label: 'Amazon', cls: 'bg-[#232F3E] text-yellow-400' };
+    return null;
+  }
 
   function createCardHTML(p){
     const subAttr = p.subcategory ? ` data-subcategory="${p.subcategory}"` : '';
+    const platform = getPlatformTag(p.link);
+    const tagHTML = platform ? `<span class="absolute top-1.5 left-1.5 ${platform.cls} text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">${platform.label}</span>` : '';
     return `
       <a href="${p.link}" target="_blank" rel="noopener noreferrer"
          class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
          data-category="${p.category}"${subAttr}>
-        <div class="aspect-square bg-[#121212]">
+        <div class="aspect-square bg-[#121212] relative">
+          ${tagHTML}
           <img src="${p.img}" class="w-full h-full object-cover" alt="${p.title}">
         </div>
         <div class="p-3 flex flex-col flex-1">

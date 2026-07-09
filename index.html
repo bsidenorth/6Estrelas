@@ -206,7 +206,7 @@
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="roupas" data-subcategory="bucket">
       <div class="aspect-square bg-[#121212] relative overflow-hidden">
-        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
+        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 z-10 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/fd3F6w1z/no-mark-React-Native-snapshot-image.png" class="w-full h-full object-cover produto-img" alt="Bucket GTA VI">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -226,7 +226,7 @@
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="canecas">
       <div class="aspect-square bg-[#121212] relative overflow-hidden">
-        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
+        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 z-10 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/TM6Gq6y3/no-mark-React-Native-snapshot-image-0.png" class="w-full h-full object-cover produto-img" alt="Caneca GTA VI Neon Style">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -246,7 +246,7 @@
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="placas-decorativas">
       <div class="aspect-square bg-[#121212] relative overflow-hidden">
-        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
+        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 z-10 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/NPF4Dgf/no-mark-React-Native-snapshot-image-2.png" class="w-full h-full object-cover produto-img" alt="Placa Decorativa Wasted">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -266,7 +266,7 @@
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="setup">
       <div class="aspect-square bg-[#121212] relative overflow-hidden">
-        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
+        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 z-10 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/Rk627PKY/no-mark-React-Native-snapshot-image-3.png" class="w-full h-full object-cover produto-img" alt="Suporte de Controle GTA VI PS5/Xbox Series S">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -286,7 +286,7 @@
        class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
        data-category="acessorios" data-subcategory="chaveiros">
       <div class="aspect-square bg-[#121212] relative overflow-hidden">
-        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
+        <span style="background-color:#EE4D2D;color:#ffffff;" class="absolute top-1.5 left-1.5 z-10 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">Shopee</span>
         <img src="https://i.ibb.co/kg7jBcCR/no-mark-React-Native-snapshot-image-1.png" class="w-full h-full object-cover produto-img" alt="Chaveiro Mini Capa PS5 GTA VI">
       </div>
       <div class="p-3 flex flex-col flex-1">
@@ -534,7 +534,7 @@
     const platformKey = p.platform === 'amazon' ? 'amazon' : 'shopee';
     const platform = PLATFORM_TAGS[platformKey];
     // Estilo inline (não depende do Tailwind JIT reconhecer a classe em conteúdo inserido dinamicamente)
-    const tagHTML = `<span style="${platform.style}" class="absolute top-1.5 left-1.5 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">${platform.label}</span>`;
+    const tagHTML = `<span style="${platform.style}" class="absolute top-1.5 left-1.5 z-10 text-[9px] font-black uppercase tracking-wider px-1.5 py-0.5">${platform.label}</span>`;
     return `
       <a href="${p.link}" target="_blank" rel="noopener noreferrer"
          class="produto-card h-full bg-black border-[1px] border-zinc-800 flex flex-col hover:border-yellow-500 transition-colors cursor-pointer"
